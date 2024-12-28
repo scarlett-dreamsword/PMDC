@@ -17,7 +17,7 @@ function calculateDamage() {
     });
 
     // Calculate damage
-    let damage = ((attackerLevel * 3) + 100) * (1 + (attackerPower / 3000)) * ((spellPower - 1) x 0.11) * (1 - ((targetLevel * 2) + (targetDefense / 3000)) * modifiers);
+    let damage = ((attackerLevel * 3) + 100) * (1 + (attackerPower / 3000)) * ((spellPower - 1) * 0.11) * (1 - ((targetLevel * 2) + (targetDefense / 3000)) * modifiers);
     damage = Math.max(0, damage); // Prevent negative damage
 
     console.log("Calculated Damage:", damage);
