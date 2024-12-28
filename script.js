@@ -1,3 +1,4 @@
+console.log("Script loaded successfully!");
 function calculateDamage() {
     // Retrieve and parse input values
     const attackerLevel = parseInt(document.getElementById("attackerLevel").value) || 0;
