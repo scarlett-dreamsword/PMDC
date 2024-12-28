@@ -1,4 +1,3 @@
-console.log("Script loaded successfully!");
 function calculateDamage() {
     // Retrieve and parse input values
     const attackerLevel = parseInt(document.getElementById("attackerLevel").value) || 0;
@@ -17,21 +16,8 @@ function calculateDamage() {
         modifiers
     });
 
-    // Calculate individual components of the formula
-    const base = (attackerLevel * 3) + 100;
-    console.log("Base:", base);
-
-    const powerFactor = 1 + (attackerPower / 3000);
-    console.log("Power Factor:", powerFactor);
-
-    const spellFactor = (spellPower - 1) * 0.11;
-    console.log("Spell Factor:", spellFactor);
-
-    const defenseFactor = ((targetLevel * 2) + (targetDefense / 3000)) * modifiers;
-    console.log("Defense Factor:", defenseFactor);
-
-    // Final damage calculation
-    let damage = base * powerFactor * spellFactor * (1 - defenseFactor);
+    // Calculate damage
+    let damage = ((attackerLevel * 3) + 100) * (1 + (attackerPower / 3000)) * ((spellPower - 1) x 0.11) * (1 - ((targetLevel * 2) + (targetDefense / 3000)) * modifiers);
     damage = Math.max(0, damage); // Prevent negative damage
 
     console.log("Calculated Damage:", damage);
